@@ -42,8 +42,8 @@ class AddWeatherCityViewController:UIViewController{
     
     @IBAction func btnSaveClicked(_ sender: UIButton) {
         
-        if let city = txtFieldCity.text{
-            let weatherUrl = URL(string: "https://samples.openweathermap.org/data/2.5/weather?q=\(city)&appid=b6907d289e10d714a6e88b30761fae22")!
+        if let city = txtFieldCity.text{//api.openweathermap.org/data/2.5/weather?q={city name}
+            let weatherUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=9170faf98379956f2d7518f666dc99f2")!
             WebService().load(url: weatherUrl) {[weak self] (weather) in
                 if let weather = weather{
                     self?.weatherViewModel = WeatherViewModel(weather: weather)

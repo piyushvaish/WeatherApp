@@ -36,9 +36,8 @@ class WeatherListTableViewController:UITableViewController,SendWeatherInfoDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell") as? WeatherCell else {
             return UITableViewCell()
         }
-        
-        cell.lblCityName?.text = weatherListViewModel.modelAt(index: indexPath.row).cityName
-        cell.lblCityTemperature?.text = String(weatherListViewModel.modelAt(index: indexPath.row).cityTemperature)
+        let vm = weatherListViewModel.modelAt(index: indexPath.row)
+        cell.configure(vm: vm)
         return cell
     }
     func sendWeatherInfoBack(weather: WeatherViewModel) {

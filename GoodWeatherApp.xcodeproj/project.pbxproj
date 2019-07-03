@@ -18,6 +18,7 @@
 		EE91D8F222CB58D5008429F4 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91D8F122CB58D5008429F4 /* WebService.swift */; };
 		EE91D8F522CB6DB9008429F4 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91D8F422CB6DB9008429F4 /* WeatherListViewModel.swift */; };
 		EE91D8F822CB6E98008429F4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE91D8F722CB6E98008429F4 /* Weather.swift */; };
+		EEE5763B22CCCADD006AE3BE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5763A22CCCADD006AE3BE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		EE91D8F122CB58D5008429F4 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EE91D8F422CB6DB9008429F4 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		EE91D8F722CB6E98008429F4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EEE5763A22CCCADD006AE3BE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				EE5E42FD22CA178900AE05A0 /* WeatherListTableViewController.swift */,
 				EE5E42FF22CA17B900AE05A0 /* AddWeatherCityViewController.swift */,
+				EEE5763A22CCCADD006AE3BE /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				EE5E430022CA17B900AE05A0 /* AddWeatherCityViewController.swift in Sources */,
 				EE91D8F522CB6DB9008429F4 /* WeatherListViewModel.swift in Sources */,
 				EE91D8F222CB58D5008429F4 /* WebService.swift in Sources */,
+				EEE5763B22CCCADD006AE3BE /* SettingsViewController.swift in Sources */,
 				EE5E42DD22CA150300AE05A0 /* AppDelegate.swift in Sources */,
 				EE91D8F822CB6E98008429F4 /* Weather.swift in Sources */,
 			);

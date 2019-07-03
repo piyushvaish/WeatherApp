@@ -10,6 +10,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="zrC-YI-wG3">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingsViewController" id="Qe6-3G-VaI" customClass="SettingsViewController" customModule="GoodWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s5D-ih-ka7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VWX-3u-6pp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWX-3u-6pp" id="GNd-he-wRB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qe6-3G-VaI" id="Fc3-Pf-dF6"/>
+                            <outlet property="delegate" destination="Qe6-3G-VaI" id="ong-8I-t8Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSw-zb-o4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-528"/>
+        </scene>
         <!--Good Weather-->
         <scene sceneID="hDY-ep-9A5">
             <objects>
@@ -58,7 +86,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Good Weather" id="c2e-8x-Kt6">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="0gs-Af-s6z"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="0gs-Af-s6z">
+                            <connections>
+                                <segue destination="Qe6-3G-VaI" kind="presentation" id="Y4V-bl-yxe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6it-zl-mY1">
                             <connections>
                                 <segue destination="cSb-cN-6su" kind="presentation" identifier="AddWeatherCitySegue" id="J8S-9h-qbk"/>
