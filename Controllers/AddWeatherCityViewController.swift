@@ -15,7 +15,29 @@ protocol SendWeatherInfoDelegate: class {
 
 class AddWeatherCityViewController:UIViewController{
     
-    @IBOutlet weak var txtFieldCity:UITextField!
+    private var addCityViewModel = AddCityViewModel()
+    @IBOutlet weak var txtFieldCity:BindingTextField!{
+        // called when the View is loaded. Since outlets are connected when the view loads. Actually registering the textfield with its class and closure that it has to send data to the class.
+        didSet{
+            txtFieldCity.bind { (text) in
+                self.addCityViewModel.city = text
+            }
+        }
+    }
+    @IBOutlet weak var txtFieldState:BindingTextField!{
+        didSet{
+            txtFieldState.bind { (text) in
+                self.addCityViewModel.state = text
+            }
+        }
+    }
+    @IBOutlet weak var txtFieldZip:BindingTextField!{
+        didSet{
+            txtFieldZip.bind { (text) in
+                self.addCityViewModel.state = text
+            }
+        }
+    }
     var weatherViewModel : WeatherViewModel?
     weak var delegate: SendWeatherInfoDelegate?
     
@@ -46,6 +68,7 @@ class AddWeatherCityViewController:UIViewController{
             let weatherUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=9170faf98379956f2d7518f666dc99f2")!
             WebService().load(url: weatherUrl) {[weak self] (weather) in
                 if let weather = weather{
+                    
                     self?.weatherViewModel = WeatherViewModel(weather: weather)
                     
                 }

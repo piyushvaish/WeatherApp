@@ -20,12 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 52/255, green: 152/255, blue:219/255, alpha: 1.0)
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         UIBarButtonItem.appearance().tintColor = UIColor.white
-        
+        setUserSettings()
         return true
     }
-
+    private func setUserSettings(){
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(Unit.fahrenheit.rawValue, forKey: "unit")
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
